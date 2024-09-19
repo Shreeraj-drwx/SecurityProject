@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: radial-gradient(circle at 17% 36%, rgba(0, 0, 50, 0.2) 0%, rgba(0, 0, 50, 0.2) 25%, rgba(0, 0, 80, 0.2) 25%, rgba(0, 0, 80, 0.2) 50%, rgba(0, 0, 100, 0.2) 50%, rgba(0, 0, 100, 0.2) 75%, rgba(0, 0, 120, 0.2) 75%, rgba(0, 0, 120, 0.2) 100%), radial-gradient(circle at 4% 82%, rgba(0, 0, 30, 0.2) 0%, rgba(0, 0, 30, 0.2) 25%, rgba(0, 0, 60, 0.2) 25%, rgba(0, 0, 60, 0.2) 50%, rgba(0, 0, 120, 0.2) 50%, rgba(0, 0, 120, 0.2) 75%, rgba(0, 0, 180, 0.2) 75%, rgba(0, 0, 180, 0.2) 100%), radial-gradient(circle at 45% 66%, rgba(0, 0, 40, 0.2) 0%, rgba(0, 0, 40, 0.2) 25%, rgba(0, 0, 70, 0.2) 25%, rgba(0, 0, 70, 0.2) 50%, rgba(0, 0, 120, 0.2) 50%, rgba(0, 0, 120, 0.2) 75%, rgba(0, 0, 160, 0.2) 75%, rgba(0, 0, 160, 0.2) 100%), linear-gradient(129deg, rgb(0, 0, 30), rgb(0, 0, 20));
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+.header {
+    width: 60%;
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.header-left {
+    width: 60%;
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.sections-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.section {
+    width: 50%;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+}
+
+.section1  {
+   text-align: center;
+}
+
+.section2{
+    width: 40%;
+    text-align: left;
+}
+ .section3 {
+     margin-top: 20px; /* Add some top margin to create space */
+     position: relative; /* Enable positioning */
+ }
+
+
+.login-form {
+    width: 80%;
+    max-width: 300px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #297fb8;
+}
+.button-container {
+    text-align: right; /* Align the container to the right */
+}
+.button-container2 {
+    text-align: right; /* Align the container to the right */
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.top-right-buttons {
+
+    width: 5%;
+    padding: 10px;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    line-height: 12px;
+    font-size: 8pt;
+    position:absolute;
+    top:10px;
+    right:50px;
+
+
+}
+
+.submit-image {
+    /* Add your own styling for the image */
+    cursor: pointer;
+    width: 50px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.submit-image {
+    cursor: pointer;
+    width: 50px;
+    height: auto;
+}
