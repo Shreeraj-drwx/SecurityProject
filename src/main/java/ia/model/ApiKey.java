@@ -4,9 +4,11 @@ public class ApiKey {
     private String provider;
     private String key;
 
-    public ApiKey(String provider, String key) {
+    private String subscriptionId;
+    public ApiKey(String provider, String key, String subscriptionId) {
         this.provider = provider;
         this.key = key;
+        this.subscriptionId = subscriptionId;
     }
 
     public String getProvider() {
@@ -16,4 +18,5 @@ public class ApiKey {
     public String getKey() {
         return key;
     }
+    public String getSubscriptionId() { return subscriptionId; }
 }
