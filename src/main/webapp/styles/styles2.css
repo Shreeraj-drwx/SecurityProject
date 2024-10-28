@@ -21,11 +21,21 @@ body {
     text-align: center;
 }
 
-.header-left {
+.smallholder {
     width: 60%;
     padding: 20px;
     margin: 20px;
     background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.header-left {
+    width: 60%;
+    padding: 20px;
+    margin: 20px;
+    background-color: #ffffff;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     text-align: left;

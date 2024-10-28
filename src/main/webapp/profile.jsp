@@ -35,6 +35,22 @@
 <p>Last Name: <%=user.getLastName()%></p>
 <p>Email: <%=user.getEmail()%></p>
 </div>
+<div class="section">
+  <h3>Azure Credentials</h3>
+  <form action="SaveAzureCredentialsServlet" method="post">
+    <label for="clientId">Client ID:</label>
+    <input type="text" id="clientId" name="clientId" required><br>
+
+    <label for="clientSecret">Client Secret:</label>
+    <input type="password" id="clientSecret" name="clientSecret" required><br>
+
+    <label for="tenantId">Tenant ID:</label>
+    <input type="text" id="tenantId" name="tenantId" required><br>
+
+    <button type="submit">Save Credentials</button>
+  </form>
+</div>
+
 
 <div class="button-container">
   <div class="top-right-buttons">

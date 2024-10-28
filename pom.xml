@@ -15,9 +15,28 @@
   </properties>
 
   <dependencies>
+    <!-- https://mvnrepository.com/artifact/com.azure/azure-identity -->
+    <dependency>
+      <groupId>com.azure</groupId>
+      <artifactId>azure-identity</artifactId>
+      <version>1.14.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/com.azure/azure-core -->
+    <dependency>
+      <groupId>com.azure</groupId>
+      <artifactId>azure-core</artifactId>
+      <version>1.53.0</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/com.azure.resourcemanager/azure-resourcemanager-resources -->
+    <dependency>
+      <groupId>com.azure.resourcemanager</groupId>
+      <artifactId>azure-resourcemanager-resources</artifactId>
+      <version>2.43.0</version>
+    </dependency>
 
 
-    <!-- https://mvnrepository.com/artifact/org.json/json -->
+
     <dependency>
       <groupId>org.json</groupId>
       <artifactId>json</artifactId>

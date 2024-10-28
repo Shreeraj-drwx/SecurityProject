@@ -3,6 +3,8 @@ package ia.controller;
 import ia.model.ApiKey;
 import ia.model.LoginDAO;
 import ia.model.UserBean;
+import ia.model.VmResource;
+import ia.spm.AzureTokenFetcher;
 import ia.spm.EncryptionUtil;
 import ia.spm.MysqlConnection;
 import org.json.JSONArray;
@@ -89,14 +91,23 @@ public class PortfolioServlet extends HttpServlet {
         // Fetch security recommendations for each API key
         for (ApiKey apiKey : apiKeys) {
             String provider = apiKey.getProvider();
-            String key = apiKey.getKey();
             String subscriptionId = apiKey.getSubscriptionId();
 
-            // Example fetching security recommendations for Azure using HTTP request
+            // Fetch security recommendations for Azure using HTTP request
             if ("Azure".equalsIgnoreCase(provider)) {
                 String url = "https://management.azure.com/subscriptions/" + subscriptionId +
                         "/resourceGroups/test1_group/providers/Microsoft.Compute/virtualMachines?api-version=2024-07-01";
-                String token = key; // Assuming the API key is the token for Azure
+
+                // Fetch the token using AzureTokenFetcher
+                String token;
+                try {
+                    token = AzureTokenFetcher.getAccessToken(userId);
+                } catch (RuntimeException e) {
+                    recommendations.add("Error fetching Azure access token: " + e.getMessage());
+                    continue;
+                } catch (SQLException e) {
+                    throw new RuntimeException(e);
+                }
 
                 try {
                     // Make an HTTP GET request to fetch recommendations
@@ -139,6 +150,7 @@ public class PortfolioServlet extends HttpServlet {
         return recommendations;
     }
 
+
     // New method to parse and format the JSON response
     private void formatJsonResponse(String jsonResponse, List<String> recommendations) {
         try {
@@ -167,8 +179,8 @@ public class PortfolioServlet extends HttpServlet {
                             ? properties.getJSONObject("storageProfile").optJSONObject("imageReference").optString("offer", "N/A") : "N/A"; // New attribute
 
                     // Format the output with each attribute on a new line
-                    String formatted = String.format("Name: %s\nID: %s\nType: %s\nLocation: %s\nVM Size: %s\nOS Type: %s\nOffer: %s\n",
-                            name, id, type, location, vmSize, osType, offer);
+                    String formatted = String.format("VM Name: %s\nID: %s\nType: %s\nLocation: %s\nVM Size: %s\nOS Type: %s\nOffer: %s\n", name, id, type, location, vmSize, osType, offer);
+                    VmResource vm = new VmResource(name, type, id, location, vmSize, osType, offer);
                     recommendations.add(formatted);
                 }
             } else {

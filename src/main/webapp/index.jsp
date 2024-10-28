@@ -11,7 +11,7 @@
 <body>
 <div class="login-container">
     <form class="login-form" action="<%=request.getContextPath()%>/login" method="post">
-        <h1> API Key Secuirty Platform </h1>
+        <h1> API Key Security Platform </h1>
         <h3>All your keys in one secure location</h3>
 
         <% String loginStatus = (String) request.getAttribute("loginStatus");

@@ -1,10 +1,4 @@
 <%@ page import="java.util.List" %>
-<%@ page import="java.util.ArrayList" %>
-<%@ page import="java.sql.Connection" %>
-<%@ page import="ia.spm.MysqlConnection" %>
-<%@ page import="java.sql.PreparedStatement" %>
-<%@ page import="java.sql.ResultSet" %>
-<%@ page import="java.sql.SQLException" %>
 <%@ page import="ia.model.ApiKey" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 
@@ -33,8 +27,9 @@
         }
     }
 %>
+<div class="header"><h1>Your API view</h1></div>
 <div class="header">
-    <h1>Your API view</h1>
+
     <h2>Manage Your API Keys</h2>
 
     <!-- Form to add a new API key -->
@@ -46,11 +41,30 @@
             <option value="GoogleCloud">Google Cloud</option>
         </select>
 
-        <label for="apiKey">API Key:</label><input type="text" name="apiKey" id="apiKey" required>
-        <label for="subscription_id"> SubscriptionID</label><input type="text" name="subscription_id" id="subscription_id" required>
+        <!-- Remove the API Key field for Azure or make it optional -->
+        <div id="apiKeyDiv">
+            <label for="apiKey">API Key:</label>
+            <input type="text" name="apiKey" id="apiKey">
+        </div>
+
+        <label for="subscription_id">Subscription ID:</label>
+        <input type="text" name="subscription_id" id="subscription_id" required>
         <input type="hidden" name="action" value="addApiKey">
         <button type="submit">Add API Key</button>
     </form>
+
+    <script>
+        // Optionally, add JavaScript to disable the API Key field for Azure
+        document.getElementById('apiProvider').addEventListener('change', function () {
+            const apiKeyDiv = document.getElementById('apiKeyDiv');
+            if (this.value === 'Azure') {
+                apiKeyDiv.style.display = 'none';
+            } else {
+                apiKeyDiv.style.display = 'block';
+            }
+        });
+    </script>
+
 
     <h3>Your Current API Keys</h3>
 
@@ -87,8 +101,18 @@
         List<String> recommendations = (List<String>) request.getAttribute("recommendations");
         if (recommendations != null && !recommendations.isEmpty()) {
             for (String recommendation : recommendations) {
+                // Split the recommendation by line breaks to print each part on a new line
+                String[] lines = recommendation.split("\n");
     %>
-    <p><%= recommendation %></p>
+    <div class="recommendation" style="text-align: left;">
+        <%
+            for (String line : lines) {
+        %>
+        <p><%= line %></p>
+        <%
+            }
+        %>
+    </div>
     <hr> <!-- Divider between recommendations -->
     <%
         }

@@ -38,6 +38,7 @@ public class LoginServlet extends HttpServlet {
                 loginCookie.setSecure(true); // Ensures the cookie is sent over HTTPS only
                 loginCookie.setHttpOnly(true); // Recommended to prevent JavaScript access
                 response.addCookie(loginCookie);
+
                 RequestDispatcher dispatcher = request.getRequestDispatcher("/PortfolioServlet");
                 dispatcher.forward(request, response);
             } else {

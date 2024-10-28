@@ -5,15 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac1d5298-194b-4a56-835a-03f407a0960d" name="Changes" comment="V1">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ia/controller/ApiFetcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ia/controller/SaveAzureCredentialsServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ia/model/AzureCredentials.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ia/model/AzureVmResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ia/model/DatabaseUtility.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ia/model/RecommendationResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ia/model/VmResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ia/spm/AzureTokenFetcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/styles/styles3.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/64f78eb7-13a2-4f53-9b75-e2b5c3f38ed3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/64f78eb7-13a2-4f53-9b75-e2b5c3f38ed3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ia/controller/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ia/controller/LoginServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ia/controller/PortfolioServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ia/controller/PortfolioServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ia/model/ApiKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ia/model/ApiKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/portfolio.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/portfolio.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/profile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/styles/styles2.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/styles/styles2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ia/controller/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ia/controller/LoginServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ia/controller/PortfolioServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ia/controller/PortfolioServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ia/model/ApiKey.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ia/model/ApiKey.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +42,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -48,21 +68,29 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Smart Tomcat.Tomcat9.9.84.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/suppalapati/Documents/Java/SecurityProject2",
+    "last_opened_file_path": "/home/suppalapati/Documents/Java/SecurityProject2/src/main/webapp/images",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "configurable.group.language",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/images" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Tomcat9.9.84" type="com.poratu.idea.plugins.tomcat">
       <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
@@ -71,8 +99,11 @@
       <predefined_log_file id="Tomcat Manager Log" />
       <predefined_log_file id="Tomcat Host Manager Log" />
       <option name="catalinaBase" value="$USER_HOME$/.SmartTomcat/SecurityProject2/IA-Stock" />
-      <option name="contextPath" value="/" />
+      <option name="contextPath" value="/index.html" />
       <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
+      <option name="envOptions">
+        <map />
+      </option>
       <option name="extraClassPath" value="" />
       <option name="tomcatInfo">
         <TomcatInfo>
@@ -117,6 +148,17 @@
       <workItem from="1728964944699" duration="4822000" />
       <workItem from="1728970654497" duration="2809000" />
       <workItem from="1729223324767" duration="5501000" />
+      <workItem from="1729243049730" duration="2037000" />
+      <workItem from="1729435137432" duration="2344000" />
+      <workItem from="1729495282265" duration="3861000" />
+      <workItem from="1729562620618" duration="4286000" />
+      <workItem from="1729567122656" duration="3495000" />
+      <workItem from="1729668512371" duration="4324000" />
+      <workItem from="1729682400489" duration="674000" />
+      <workItem from="1729687828997" duration="816000" />
+      <workItem from="1729769582486" duration="1524000" />
+      <workItem from="1729886150556" duration="8815000" />
+      <workItem from="1730098821798" duration="11153000" />
     </task>
     <task id="LOCAL-00001" summary="V1">
       <option name="closed" value="true" />
